@@ -5,9 +5,19 @@ const pipe = document.querySelector('.pipe')
 const gameOverScreen = document.querySelector('.game-over-screen')
 const restartButton = document.querySelector('.restart-button')
 
+const marioAudio = new Audio('../sounds/MARIO_audio_theme.mp3')
+const gameOverAudio = new Audio('../sounds/MARIO_audio_gameover.mp3')
+marioAudio.loop = true
+
+let gameStarted = false
 
 // Funções
 const marioJump = () => {
+  if (!gameStarted) {
+    marioAudio.play()
+    gameStarted = true
+  }
+
     mario.classList.add('jump')
   
     setTimeout(() => {
@@ -35,8 +45,12 @@ const loop = setInterval(() => {
       mario.style.marginLeft = '50px'
       mario.style.bottom = '90px'
 
-      gameOverScreen.classList.add('active')
+      marioAudio.pause()
+      marioAudio.currentTime = 0
+      gameOverAudio.play()
 
+      gameOverScreen.classList.add('active')
+      
       clearInterval(loop)
     }
   }, 10)
