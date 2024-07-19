@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 15px solid rgb(35, 160, 35);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+/* Animação para o cano */
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+/* Animação para o salto do Mario*/
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+.game-over-screen.active {
+  display: block;
+}
+
+.game-over-screen h1 {
+  color: #FF0000;
+  font-size: 48px;
+  letter-spacing: 15px;
+
+  animation: game-over-animation 1.5s ease-out;
+}
+
+@keyframes game-over-animation {
+  0% {
+    transform: translateY(-180%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.restart-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+
+  background-color: rgb(30, 165, 30);
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  /*box-shadow: 2px 2px 0 red;*/
+}
+
+.restart-button:hover {
+  background-color: rgb(25, 128, 25);
+}
