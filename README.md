@@ -39,11 +39,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - <p align="center"> Trata-se de um jogo simples, criado com HTML, CSS e JavaScript, onde o objetivo do Mario é pular o maior número possível de canos. Ao ser derrotado, é apresentada uma tela de "Game Over", junto com a opção do usuário reiniciar o jogo. <br/><br/></p>
 
 
-
-
-
-
-
 ---
 
 Feito por Bernardo Sá :wave: [Participe da comunidade da Rocketseat!](https://discord.gg/rocketseat)
