@@ -25,6 +25,12 @@ const marioJump = () => {
     }, 500)
   }
 
+  const handleKeydown = (event) => {
+    if (event.code === 'Space') {
+      marioJump()
+    }
+  }
+
 const restartGame = () => {
    location.reload()
   }
@@ -56,7 +62,7 @@ const loop = setInterval(() => {
   }, 10)
 
 // Eventos 
-document.addEventListener('keydown', marioJump)
+document.addEventListener('keydown', handleKeydown)
 restartButton.addEventListener('click', restartGame)
 
 
