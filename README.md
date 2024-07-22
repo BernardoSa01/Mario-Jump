@@ -12,7 +12,7 @@ Aplicação front-end desenvolvida com objetivo de praticar e reforçar conceito
   <img alt="Projeto Mario Jump!" src=".github/gameOver.png" width="100%">
 </p>
 
-- [Acesse o projeto finalizado, online]()
+- [Acesse o projeto finalizado, online](https://bernardosa01.github.io/Mario-Jump/)
 <br><br>
 
 <p align="center">
